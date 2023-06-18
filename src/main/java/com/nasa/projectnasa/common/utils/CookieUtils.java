@@ -1,4 +1,4 @@
-package com.nasa.projectnasa.oauth2.common;
+package com.nasa.projectnasa.common.utils;
 
 import java.util.Arrays;
 import java.util.Base64;

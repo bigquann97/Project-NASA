@@ -1,9 +1,11 @@
 package com.nasa.projectnasa.oauth2.common;
 
-import static com.nasa.projectnasa.oauth2.common.CookieAuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
+import static com.nasa.projectnasa.common.utils.CookieAuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
 import com.nasa.projectnasa.account.dto.AccountResponse;
 import com.nasa.projectnasa.common.jwt.JwtTokenProvider;
+import com.nasa.projectnasa.common.utils.CookieAuthorizationRequestRepository;
+import com.nasa.projectnasa.common.utils.CookieUtils;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Optional;
@@ -27,7 +29,6 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
   private String redirectUri;
   private final JwtTokenProvider jwtTokenProvider;
   private final CookieAuthorizationRequestRepository cookieAuthorizationRequestRepository;
-
 
   @Override
   public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {

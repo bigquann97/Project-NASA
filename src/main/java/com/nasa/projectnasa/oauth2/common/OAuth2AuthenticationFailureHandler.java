@@ -1,7 +1,9 @@
 package com.nasa.projectnasa.oauth2.common;
 
-import static com.nasa.projectnasa.oauth2.common.CookieAuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
+import static com.nasa.projectnasa.common.utils.CookieAuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
+import com.nasa.projectnasa.common.utils.CookieAuthorizationRequestRepository;
+import com.nasa.projectnasa.common.utils.CookieUtils;
 import java.io.IOException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -33,4 +35,5 @@ public class OAuth2AuthenticationFailureHandler extends SimpleUrlAuthenticationF
     cookieAuthorizationRequestRepository.removeAuthorizationRequestCookies(request, response);
     getRedirectStrategy().sendRedirect(request, response, targetUrl);
   }
+
 }

@@ -1,4 +1,4 @@
-package com.nasa.projectnasa.oauth2.common;
+package com.nasa.projectnasa.common.utils;
 
 import com.nimbusds.oauth2.sdk.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
