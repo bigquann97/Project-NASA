@@ -25,6 +25,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
     // jwt
@@ -36,12 +38,15 @@ dependencies {
     implementation group: 'org.json', name: 'json', version: '20220924'
     implementation 'com.google.code.gson:gson:2.8.9'
 
-    //db
+    // db
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.mysql:mysql-connector-j'
 
+    // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    // AWS
 
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
